@@ -11,8 +11,14 @@ export default class TodoEntity {
   user: UserEntity
 
   @Column()
-  name: string
+  title: string
 
   @Column()
-  username: string
+  done: boolean
+
+  @Column()
+  deadline: string
+
+  @Column()
+  created_at: Date
 }
