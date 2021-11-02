@@ -1,3 +1,3 @@
 export interface DeleteUserTodoUseCase {
-    delete: (username: string, idTodo: number) => Promise<void>
+    delete: (idTodo: string) => Promise<void>
 }
