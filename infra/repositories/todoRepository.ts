@@ -15,10 +15,8 @@ export class TodoRepositoryTypeORM implements TodoRepository {
         await todoRepository.update({ id }, todo)
     }
 
-    async done(todo: TodoEntity): Promise<void> {
+    async done(id: string): Promise<void> {
         const todoRepository = getRepository(TodoEntity)
-        const { id } = todo
-        delete todo.id
         await todoRepository.update({ id }, { done: true })
     }
 
